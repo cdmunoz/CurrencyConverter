@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "co.cdmunoz.currencyconverter"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // Unit testing dependencies
+    testCompile 'junit:junit:4.12'
+    //App compat library
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    //chart library
+    compile 'com.github.PhilJay:MPAndroidChart:v2.0.9'
+    //butterknife library
+    compile 'com.jakewharton:butterknife:7.0.1'
+    androidTestCompile 'junit:junit:4.12'
+}

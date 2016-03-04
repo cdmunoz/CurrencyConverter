@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="co.cdmunoz.currencyconverter.MainActivity"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/dollarEditText"
+                android:autoText="false"
+                android:editable="false"
+                android:hint="@string/usd_edit_text_hint"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_convert_lbl"
+                android:id="@+id/convertButton"
+                android:layout_below="@+id/dollarEditText"
+                android:layout_alignRight="@+id/dollarEditText"
+                android:layout_alignEnd="@+id/dollarEditText"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/convertButton"
+            android:id="@+id/linearLayout"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/convertButton"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="0"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:paddingLeft="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gbp_txtv_lbl"
+                    android:id="@+id/gbpTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/convertButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eur_txtv_lbl"
+                    android:id="@+id/eurTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/gbpTextView"
+                    android:layout_alignLeft="@+id/gbpTextView"
+                    android:layout_alignStart="@+id/gbpTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jpy_txtv_lbl"
+                    android:id="@+id/jpyTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/eurTextView"
+                    android:layout_alignLeft="@+id/eurTextView"
+                    android:layout_alignStart="@+id/eurTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brl_txtv_lbl"
+                    android:id="@+id/brlTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/jpyTextView"
+                    android:layout_alignLeft="@+id/jpyTextView"
+                    android:layout_alignStart="@+id/jpyTextView"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/convertButton"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="left"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gbp_txtv_lbl"
+                    android:id="@+id/gbpValTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/convertButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eur_txtv_lbl"
+                    android:id="@+id/eurValTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/gbpValTextView"
+                    android:layout_alignLeft="@+id/gbpValTextView"
+                    android:layout_alignStart="@+id/gbpValTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jpy_txtv_lbl"
+                    android:id="@+id/jpyValTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/eurValTextView"
+                    android:layout_alignLeft="@+id/eurValTextView"
+                    android:layout_alignStart="@+id/eurValTextView"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brl_txtv_lbl"
+                    android:id="@+id/brlValTextView"
+                    android:elegantTextHeight="false"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/jpyValTextView"
+                    android:layout_alignLeft="@+id/jpyValTextView"
+                    android:layout_alignStart="@+id/jpyValTextView"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"
+        android:layout_weight="1">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <!--ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewCurrencies"
+        android:layout_below="@+id/convertButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/-->
+
+</LinearLayout>
